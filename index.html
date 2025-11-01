@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metode Pembayaran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #222222, #000000);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        .qris-container {
+            padding: 25px;
+            text-align: center;
+            background: #222222;
+            border-bottom: 1px solid #333;
+        }
+
+        .qris-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .qris-image {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            margin: 0 auto;
+            display: block;
+            border: 2px solid #444;
+        }
+
+        .qris-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+        }
+
+        .payment-methods {
+            padding: 25px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .payment-option {
+            background: #222222;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a4a4a;
+            transition: all 0.3s ease;
+        }
+
+        .payment-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-left-color: #6a6a6a;
+        }
+
+        .payment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .dana {
+            background: linear-gradient(135deg, #00a3ff, #0080ff);
+            color: white;
+        }
+
+        .gopay {
+            background: linear-gradient(135deg, #00aa13, #00880f);
+            color: white;
+        }
+
+        .payment-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .payment-details {
+            margin-left: 55px;
+        }
+
+        .payment-number {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .payment-holder {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+        }
+
+        .channel-section {
+            padding: 25px;
+            background: #222222;
+            border-top: 1px solid #333;
+        }
+
+        .channel-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .channel-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .channel-button i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777777;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .payment-details {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .payment-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .payment-icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>METODE PEMBAYARAN</h1>
+            <p class="subtitle">Pilih metode pembayaran yang paling nyaman untuk Anda</p>
+        </header>
+        
+        <div class="qris-container">
+            <h2 class="qris-title">QRIS - Pembayaran Nasional</h2>
+            <img src="https://ibb.co.com/pr9dbX6L" alt="QR Code Pembayaran" class="qris-image">
+            <p class="qris-info">Gunakan QRIS untuk pembayaran yang lebih cepat dan mudah</p>
+        </div>
+        
+        <div class="payment-methods">
+            <h2 class="section-title">Transfer Manual</h2>
+            
+            <div class="payment-option">
+                <div class="payment-header">
+                    <div class="payment-icon dana">D</div>
+                    <div class="payment-name">DANA</div>
+                </div>
+                <div class="payment-details">
+                    <div class="payment-number">087844198418</div>
+                    <div class="payment-holder">A/N: PARTONO</div>
+                </div>
+            </div>
+            
+            <div class="payment-option">
+                <div class="payment-header">
+                    <div class="payment-icon gopay">G</div>
+                    <div class="payment-name">GOPAY</div>
+                </div>
+                <div class="payment-details">
+                    <div class="payment-number">085704141861</div>
+                    <div class="payment-holder">A/N: madzzstore</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="channel-section">
+            <h2 class="section-title">Saluran Madzz Store</h2>
+            <a href="https://whatsapp.com/channel/0029Vb6RU3zGufJ1QqhfBE2k" class="channel-button">
+                <i>📱</i> WhatsApp Channel
+            </a>
+        </div>
+        
+        <footer>
+            <p>Terima kasih atas pembelian Anda</p>
+            <p>Hubungi kami jika mengalami kendala dalam pembayaran</p>
+        </footer>
+    </div>
+</body>
+</html>
